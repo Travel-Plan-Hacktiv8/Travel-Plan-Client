@@ -136,7 +136,7 @@ function fetchData(params) {
     })
         .done(data => {
             
-            $('.view-data').empty()
+            $('.view-data-all').empty()
             console.log(data)
             for (let i in data) {
                 let id = data[i].id
@@ -154,7 +154,7 @@ function fetchData(params) {
                 }
 
                 setTimeout(() => {
-                    $('.view-data').append(
+                    $('.view-data-all').append(
                         `
                         <div class="head-data d-flex justify-content-around mt-2" data-toggle="collapse" data-target="#collapse${id}" aria-expanded="false" style="cursor:pointer;padding: 35px!important;">
                             <input id="id" type="hidden" value="${id}">
@@ -199,7 +199,7 @@ function fetchData(params) {
                         </div>`
                     )
                     cuaca(id, destination, '')
-                }, 500);
+                }, 1000);
 
                 
             }
