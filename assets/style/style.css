@@ -1,0 +1,138 @@
+*{
+    margin: 0px!important;
+    padding: 0px!important;
+    
+}
+
+.head-data{
+    border-radius: 20px;
+    width: 70vw !important;
+    height: auto;
+    background-color: #f6f6fa;
+}
+
+#view-data{
+    max-height: 86vh;
+    overflow: scroll !important;
+}
+
+#travel-create{
+    max-height: 86vh;
+    overflow: scroll !important;
+}
+
+.my-card{
+    
+    border-radius: 20px;
+    width: 70vw !important;
+    height: auto;
+    background-color: #f6f6fa;
+    -webkit-box-shadow: inset 0px 60px 24px -18px rgba(0,0,0,0.02);
+    -moz-box-shadow: inset 0px 60px 24px -18px rgba(0,0,0,0.02);
+    box-shadow: inset 0px 60px 24px -18px rgba(0,0,0,0.02);
+}
+
+.my-card-2{
+    overflow: scroll;
+    margin: 5px;
+    border-radius: 20px;
+    width: 70% !important;
+    height: 98%;
+    background-color: white;
+}
+
+.left-data-view{
+    display: flex;
+    align-items: center;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* .container:hover{
+    transform: scale(1.05);
+} */
+
+#bg{
+	opacity:.80;
+	position: absolute;
+	display: none;
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	z-index:1001;
+	opacity: 0.8;
+}
+
+#loader {
+    z-index: 999999999;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+
+.travel-create input{
+    width: 70vw !important;
+}
+
+.travel-create textarea{
+    width: 70vw !important;
+}
+
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    .travel-request{
+        border-radius: 50px 50px 50px 50px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .left-sidebar{
+        background: rgb(34,112,196);
+        background: linear-gradient(0deg, rgba(34,112,196,1) 25%, rgba(0,123,255,1) 56%);
+        border-radius: 50px 0px 0px 50px;
+        /* background-color: #007bff; */
+        height: 101vh;
+        width: 100%;
+    }
+    
+    .left-sidebar a{
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+    }
+    
+    .left-sidebar a:hover{
+        color: white;
+    }
+    
+    .container{
+        border-radius: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
