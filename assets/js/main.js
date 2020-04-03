@@ -7,6 +7,10 @@ $(document).ready(function () {
     auth()
     $('#logout').click(function () {
         localStorage.clear()
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+            console.log('User signed out.');
+        });
         auth()
     })
 
@@ -450,4 +454,38 @@ function holiday(params) {
 
         })
     
+}
+
+function onSignIn(googleUser) {
+    var id_token = googleUser.getAuthResponse().id_token;
+    event.preventDefault()
+    $('#bg').fadeIn("slow");
+    $('#loading').attr('style', 'display:table !important; display: flex !important;justify-content: center !important; align-items: center !important;');
+    const email = $('#email-login').val()
+    const password = $('#password-login').val()
+    console.log(email, password)
+
+    $.ajax({
+        method: 'POST',
+        url: baseUrl + '/user/googleSign',
+        data: {
+            id_token
+        }
+    })
+        .done(data => {
+            $('#loading').attr('style', 'display:none !important');
+            $('#bg').fadeOut("slow");
+            localStorage.setItem('token', data.access_token)
+            auth()
+        })
+        .fail(err => {
+            $('#loading').attr('style', 'display:none !important');
+            $('#bg').fadeOut("slow");
+            console.log(err);
+        })
+//   var profile = googleUser.getBasicProfile();
+//   console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+//   console.log('Name: ' + profile.getName());
+//   console.log('Image URL: ' + profile.getImageUrl());
+//   console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 }
