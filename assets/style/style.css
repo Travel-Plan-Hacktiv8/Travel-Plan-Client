@@ -11,20 +11,42 @@ body{
 }
 
 .view-data-all{
-    max-height: 45vh;
-    overflow: scroll !important;
+    /* max-height: 45vh; */
 }
 
 #view-data{
     width: 100% !important;
     min-width: 70vw !important;
     max-height: 86vh;
+    overflow: scroll !important;
     
 }
 
 #travel-create{
     max-height: 86vh;
     overflow: scroll !important;
+}
+
+.article-news{
+    height: 50%;
+    margin-top: 10px;
+    overflow: scroll;
+}
+
+.news-content{
+    max-width: 80vw !important;
+    max-height: 86vh;
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-news{
+    margin: 30px !important;
+    width: 250px;
+    height: 350px;
+    /* background-color: gray; */
 }
 
 .card-app{
@@ -38,6 +60,7 @@ body{
 }
 
 .app .button{
+    border-radius: 10px;
     background-color: white;
     border: none;
     color: black;
