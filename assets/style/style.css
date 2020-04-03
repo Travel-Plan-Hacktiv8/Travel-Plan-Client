@@ -73,6 +73,26 @@ body{
     cursor: pointer;
 }
 
+.holiday-btn .button{
+    font-size: 12px;
+    margin-top: 20px!important;
+    background-color: #f5f6f9;
+    border: none;
+    color: #8f91aa;
+    padding: 10px 27px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.holiday-btn .button:hover{
+    background-color: #f5f6f9;
+    color: black;
+    border: 1px solid black;
+}
+
+
 .app .button:hover{
     background-color: #1b9ffa;
     color: white;
