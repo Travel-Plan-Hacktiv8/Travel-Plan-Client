@@ -1,9 +1,16 @@
 let baseUrl = 'http://localhost:3000'
 
 $(document).ready(function () {
+    
+    // $('[data-toggle="popover"]').popover()
+    
     auth()
     $('#logout').click(function () {
         localStorage.clear()
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+            console.log('User signed out.');
+        });
         auth()
     })
 
@@ -145,7 +152,7 @@ function fetchData(params) {
         }
     })
         .done(data => {
-            
+            holiday()
             $('.view-data-all').empty()
             console.log(data)
             for (let i in data) {
@@ -209,7 +216,7 @@ function fetchData(params) {
                         </div>`
                     )
                     cuaca(id, destination, '')
-                }, 1000);
+                }, 500);
 
                 
             }
@@ -420,4 +427,65 @@ function getNews() {
         .fail(err =>{
             console.log(err)
         })
+}
+
+function holiday(params) {
+    $.ajax({
+        method: 'GET',
+        url: baseUrl + '/api/holiday'
+    })
+
+        .done(data =>{
+            for(let i in data){
+                const tanggal = new Date(data[i].date).toDateString()
+                const keterangan = data[i].localName
+                $('.holiday').append(
+                    `
+                    <div class="holiday-date" style="text-align: center;">
+                        <p>${tanggal}</p>
+                        <p>${keterangan}</p>
+                        <hr>
+                    </div>
+                    `
+                )
+            }
+        })
+        .fail(err =>{
+
+        })
+    
+}
+
+function onSignIn(googleUser) {
+    var id_token = googleUser.getAuthResponse().id_token;
+    event.preventDefault()
+    $('#bg').fadeIn("slow");
+    $('#loading').attr('style', 'display:table !important; display: flex !important;justify-content: center !important; align-items: center !important;');
+    const email = $('#email-login').val()
+    const password = $('#password-login').val()
+    console.log(email, password)
+
+    $.ajax({
+        method: 'POST',
+        url: baseUrl + '/user/googleSign',
+        data: {
+            id_token
+        }
+    })
+        .done(data => {
+            $('#loading').attr('style', 'display:none !important');
+            $('#bg').fadeOut("slow");
+            localStorage.setItem('token', data.access_token)
+            auth()
+        })
+        .fail(err => {
+            $('#loading').attr('style', 'display:none !important');
+            $('#bg').fadeOut("slow");
+            console.log(err);
+        })
+//   var profile = googleUser.getBasicProfile();
+//   console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+//   console.log('Name: ' + profile.getName());
+//   console.log('Image URL: ' + profile.getImageUrl());
+//   console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 }
