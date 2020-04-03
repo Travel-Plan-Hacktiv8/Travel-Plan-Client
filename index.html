@@ -6,7 +6,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="./assets/style/style.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;700&family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;700&family=Roboto+Mono:wght@300;400;500;700&display=swap"
+            rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
             integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -18,6 +20,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
+
     </head>
     <style type="text/css">
         /* div{
@@ -133,7 +136,7 @@
                             </div>
                             <div class="p-2 bd-highlight mb-5 mt-5">
                                 <img src="./assets/img/distance.png" alt="" style="width: 32px;">
-                                <a href="" id="view"  class=" ml-3">View Trip</a>
+                                <a href="" id="view" class=" ml-3">View Trip</a>
                             </div>
                             <div class="p-2 bd-highlight mb-5">
                                 <img src="./assets/img/plus.png" alt="" style="width: 23px;">
@@ -152,69 +155,83 @@
                 <div class="col-md-auto">
                     <!-- View Data -->
                     <div id="view-data" class="view-data m-5" style="">
-                       <h4 class="mb-4">All Trip</h4>
-                       <div class=" d-flex justify-content-between mb-5">
-                           <div class="col-md-7">
-                               <div class="card-app p-3" >
-                                   <div class="row">
-                                       <div class="col-md-6">
-                                           <img class="product-adv" src="./assets/img/2856741.png" alt="" width="170px" >
-                                       </div>
-                                       <div class="col-md-5 ">
-                                           <h4 class="my-5" style="text-align: center;">Cooming Soon For Your Smartphone</h4>
+                        <h4 class="mb-4">All Trip</h4>
+                        <div class=" d-flex justify-content-between mb-5">
+                            <div class="col-md-7">
+                                <div class="card-app p-3">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <img class="product-adv" src="./assets/img/2856741.png" alt=""
+                                                width="170px">
+                                        </div>
+                                        <div class="col-md-5 ">
+                                            <h4 class="my-5" style="text-align: center;">Cooming Soon For Your
+                                                Smartphone</h4>
 
-                                           <div class="app d-flex justify-content-between" style="margin-top: 100px!important;">
+                                            <div class="app d-flex justify-content-between"
+                                                style="margin-top: 100px!important;">
                                                 <button type="submit" class="button p-3">Apps Store</button>
                                                 <button type="submit" class="button p-3">Play Store</button>
-                                           </div>
+                                            </div>
                                         </div>
-                                   </div>
+                                    </div>
 
-                               </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card-app p-5" >
-                                    <h4 class="" style="text-align: center;">News</h4>
                                 </div>
                             </div>
-                       </div>
-                       <div class="view-data-all">
+                            <div class="col-md-4">
+                                <div class=" p-5">
+                                    <div class="d-flacd-flex flex-column bd-highlight mb-3">
+                                        <div>
+                                            <h4 class="" style="text-align: center;">Profile</h4>
+                                            <p style="text-align: center;">JhonDoe@mail.com</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <h4 class="" style="text-align: center;">Holiday Date</h4>
+                            <div class="holiday d-flex justify-content-center">
 
-                       </div>
+                            </div>
+                        </div>
+                        <div class="view-data-all">
+
+                        </div>
                     </div>
                     <!-- Berita -->
                     <div id="news-data" class="news-data" style="display: none;">
                         <div>
                             <div class="news-content">
-                                
+
                             </div>
                         </div>
                     </div>
                     <!-- Show Travel Create -->
-                    <div id="travel-create" class="travel-create m-5" style="width: 100%; display: none;" >
+                    <div id="travel-create" class="travel-create m-5" style="width: 100%; display: none;">
                         <h4>Add Trip</h4>
                         <form onsubmit="add(event)">
                             <div class="form-group py-md-5">
-                              <label for="exampleInputEmail1">Destination : </label>
-                              <input type="text" class="form-control" id="destination-input" >
+                                <label for="exampleInputEmail1">Destination : </label>
+                                <input type="text" class="form-control" id="destination-input">
                             </div>
                             <div class="form-group pb-md-5">
-                              <label for="">Activity : </label>
-                              <textarea class="form-control" id="activity-input" rows="3"></textarea>
+                                <label for="">Activity : </label>
+                                <textarea class="form-control" id="activity-input" rows="3"></textarea>
                             </div>
                             <div class="form-group pb-md-5">
                                 <label for="">Date : </label>
-                                <input type="date" class="form-control" id="date-input" >
+                                <input type="date" class="form-control" id="date-input">
                             </div>
                             <div class="form-group pb-md-5">
                                 <label for="">State</label>
                                 <select id="status-input" class="form-control">
-                                  <option value="true">Complete</option>
-                                  <option value="false">Uncomplete</option>
+                                    <option value="true">Complete</option>
+                                    <option value="false">Uncomplete</option>
                                 </select>
                             </div>
                             <button type="submit" class="btn btn-primary p-3">Submit</button>
-                          </form>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -231,34 +248,35 @@
                     <div class="modal-content p-3">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Edit</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="font-size:15px!important;">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                                style="font-size:15px!important;">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body" style="width: 25vw!important;">
                             <form onsubmit="update(event)">
-                                <input type="hidden" class="form-control" id="id-update" >
+                                <input type="hidden" class="form-control" id="id-update">
                                 <div class="form-group py-md-5">
-                                  <label for="exampleInputEmail1">Destination : </label>
-                                  <input type="text" class="form-control" id="destination-update" >
+                                    <label for="exampleInputEmail1">Destination : </label>
+                                    <input type="text" class="form-control" id="destination-update">
                                 </div>
                                 <div class="form-group pb-md-5">
-                                  <label for="">Activity : </label>
-                                  <textarea class="form-control" id="activity-update" rows="3"></textarea>
+                                    <label for="">Activity : </label>
+                                    <textarea class="form-control" id="activity-update" rows="3"></textarea>
                                 </div>
                                 <div class="form-group pb-md-5">
                                     <label for="">Date : </label>
-                                    <input type="date" class="form-control" id="date-update" >
+                                    <input type="date" class="form-control" id="date-update">
                                 </div>
                                 <div class="form-group pb-md-5">
                                     <label for="">State</label>
                                     <select id="status-update" class="form-control">
-                                        <option value="true" >Complete</option>
+                                        <option value="true">Complete</option>
                                         <option value="false" selected>Uncomplete</option>
                                     </select>
                                 </div>
                                 <button type="submit" class="btn btn-primary p-3">Submit</button>
-                              </form>
+                            </form>
                         </div>
                     </div>
                 </div>

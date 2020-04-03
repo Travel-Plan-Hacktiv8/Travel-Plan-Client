@@ -1,6 +1,9 @@
 let baseUrl = 'http://localhost:3000'
 
 $(document).ready(function () {
+    
+    // $('[data-toggle="popover"]').popover()
+    
     auth()
     $('#logout').click(function () {
         localStorage.clear()
@@ -145,7 +148,7 @@ function fetchData(params) {
         }
     })
         .done(data => {
-            
+            holiday()
             $('.view-data-all').empty()
             console.log(data)
             for (let i in data) {
@@ -209,7 +212,7 @@ function fetchData(params) {
                         </div>`
                     )
                     cuaca(id, destination, '')
-                }, 1000);
+                }, 500);
 
                 
             }
@@ -420,4 +423,31 @@ function getNews() {
         .fail(err =>{
             console.log(err)
         })
+}
+
+function holiday(params) {
+    $.ajax({
+        method: 'GET',
+        url: baseUrl + '/api/holiday'
+    })
+
+        .done(data =>{
+            for(let i in data){
+                const tanggal = new Date(data[i].date).toDateString()
+                const keterangan = data[i].localName
+                $('.holiday').append(
+                    `
+                    <div class="holiday-date" style="text-align: center;">
+                        <p>${tanggal}</p>
+                        <p>${keterangan}</p>
+                        <hr>
+                    </div>
+                    `
+                )
+            }
+        })
+        .fail(err =>{
+
+        })
+    
 }

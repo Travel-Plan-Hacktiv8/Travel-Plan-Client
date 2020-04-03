@@ -212,4 +212,19 @@ body{
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 
-    
+    .holiday{
+        margin-bottom: 50px!important;
+        display: flex;
+        justify-content: center;
+        flex: wrap;
+        max-width: 70vw !important;
+        max-height: 23vh;
+        overflow: scroll;
+    }
+
+    .holiday-date{
+        margin-top: 20px!important;
+        margin-right: 20px!important;
+        max-height: 150px;
+        width: 100px;
+    }
