@@ -135,8 +135,8 @@ body{
 
     .left-sidebar{
         /* border-radius: 50px 0px 0px 50px; */
-        background: #0e52ff;
-        background: linear-gradient(0deg, #0e52ff 40%, rgb(2, 40, 194) 60%);
+        background: #1b9ffa;
+        background: linear-gradient(0deg, #1b9ffa 40%, #0482ff 60%);
         /* background-color: #007bff; */
         height: 101vh;
         width: 100%;
@@ -145,7 +145,7 @@ body{
     .left-sidebar a{
         letter-spacing: 2px;
         font-size: 18px;
-        font-weight: 300;
+        font-weight: 700;
     }
     
     .left-sidebar a{
