@@ -22,12 +22,22 @@ $(document).ready(function () {
 
         $('#travel-create').attr('style', 'display:  !important;');
         $('#view-data').attr('style', 'display:none  !important;');
+        $('#news-data').attr('style', 'display:none  !important;');
     })
 
     $('#view').click(function (event) {
         event.preventDefault()
+        $('#news-data').attr('style', 'display:none  !important;');
         $('#travel-create').attr('style', 'display:none  !important;');
         $('#view-data').attr('style', 'display:  !important;');
+    })
+
+    $('#news').click(function (event) {
+        event.preventDefault()
+        getNews()
+        $('#view-data').attr('style', 'display:none  !important;');
+        $('#travel-create').attr('style', 'display:none  !important;');
+        $('#news-data').attr('style', 'display:  !important;');
     })
 })
 
@@ -337,33 +347,32 @@ function del(event) {
 function cuaca(id, city, event) {
     $.ajax({
         method: 'GET',
-        url: baseUrl + '/api/' + city,
+        url: baseUrl + '/api/weather/' + city,
         headers: {
             token: localStorage.token
         }
     })
         .done(data=>{
-            console.log();
-            
+            console.log(data);
             $('#cuaca'+id).append(
                 `<div class="mb-3">
                     <label style="color:#8f91aa !important;">Time Zone : </label>
-                    <p>${data.Weather.data[0].timezone}</p>
+                    <p>${data.data.data[0].timezone}</p>
                 </div>
 
                 <div class="mb-3">
                     <label style="color:#8f91aa !important;">Counter Code : </label>
-                    <p>${data.Weather.data[0].country_code}</p>
+                    <p>${data.data.data[0].country_code}</p>
                 </div>
 
                 <div style="border:1.2px solid #f6f6fa"></div>
 
                 <div class="mb-3">
                     <label style="color:#8f91aa !important;">Status : </label>
-                    <img src="https://www.weatherbit.io/static/img/icons/${data.Weather.data[0].weather.icon}.png" style="width:32px;">
-                    <p>${data.Weather.data[0].weather.description}, Temp : ${data.Weather.data[0].temp}</p>
+                    <img src="https://www.weatherbit.io/static/img/icons/${data.data.data[0].weather.icon}.png" style="width:32px;">
+                    <p>${data.data.data[0].weather.description}, Temp : ${data.data.data[0].temp}</p>
                     <label style="color:#8f91aa !important;">City Name : </label>
-                    <p>${data.Weather.data[0].city_name}</p>
+                    <p>${data.data.data[0].city_name}</p>
                 </div>`
             )
         })
@@ -372,3 +381,43 @@ function cuaca(id, city, event) {
         })
 }
 
+function getNews() {
+    const country = 'ID'
+    $.ajax({
+        method: 'GET',
+        url: baseUrl + '/api/news/' + country,
+        headers: {
+            token: localStorage.token
+        }
+    })
+        .done(data=>{
+            console.log(data);
+            for(let i in data.data.articles){
+                let title = data.data.articles[i].title
+                let author = data.data.articles[i].author
+                let content = data.data.articles[i].content
+                let urlToImage = data.data.articles[i].urlToImage
+                let url = data.data.articles[i].url
+                let date = data.data.articles[i].publishedAt
+                $('.news-content').append(
+                    `<div class="card-news">
+                        <img src="${urlToImage}" alt="" style="width: 100%;">
+                        <div class="article-news">
+                            <h4>${title}</h4>
+                            <p>
+                                ${content}
+                            </p>
+                            <a href="${url}">View</a>
+                        </div>
+                        <div class="identity-news">
+                            <b><label>${author}</label></b>
+                            <label>${date}</label>
+                        </div>
+                    </div>`
+                )
+            }
+        })
+        .fail(err =>{
+            console.log(err)
+        })
+}
