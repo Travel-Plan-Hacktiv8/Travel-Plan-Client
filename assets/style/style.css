@@ -1,17 +1,19 @@
 *{
     margin: 0px!important;
     padding: 0px!important;
+    font-family: 'Comic Neue', cursive;
     
 }
 
-.head-data{
-    border-radius: 20px;
-    width: 70vw !important;
-    height: auto;
-    background-color: #f6f6fa;
+body{
+    
 }
 
+
+
 #view-data{
+    width: 100% !important;
+    min-width: 65vw !important;
     max-height: 86vh;
     overflow: scroll !important;
 }
@@ -21,12 +23,29 @@
     overflow: scroll !important;
 }
 
+.card-app{
+    border-radius: 20px;
+    width: 100% !important;
+    height: 250px;
+    background-color: #f5f6f9;
+    -webkit-box-shadow: inset 0px 60px 24px -18px rgba(0,0,0,0.02);
+    -moz-box-shadow: inset 0px 60px 24px -18px rgba(0,0,0,0.02);
+    box-shadow: inset 0px 60px 24px -18px rgba(0,0,0,0.02);
+}
+
+.head-data{
+    border-radius: 20px;
+    width: 100% !important;
+    height: auto;
+    background-color: #f5f6f9;
+}
+
 .my-card{
     
     border-radius: 20px;
-    width: 70vw !important;
+    width: 100% !important;
     height: auto;
-    background-color: #f6f6fa;
+    background-color: #f5f6f9;
     -webkit-box-shadow: inset 0px 60px 24px -18px rgba(0,0,0,0.02);
     -moz-box-shadow: inset 0px 60px 24px -18px rgba(0,0,0,0.02);
     box-shadow: inset 0px 60px 24px -18px rgba(0,0,0,0.02);
@@ -109,17 +128,24 @@
     }
     
     .travel-request{
-        border-radius: 50px 50px 50px 50px;
+        /* margin: 20px 50px 20px 50px !important; */
+        /* border-radius: 50px 50px 50px 50px; */
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 
     .left-sidebar{
-        background: rgb(34,112,196);
-        background: linear-gradient(0deg, rgba(34,112,196,1) 25%, rgba(0,123,255,1) 56%);
-        border-radius: 50px 0px 0px 50px;
+        /* border-radius: 50px 0px 0px 50px; */
+        background: #0e52ff;
+        background: linear-gradient(0deg, #0e52ff 40%, rgb(2, 40, 194) 60%);
         /* background-color: #007bff; */
         height: 101vh;
         width: 100%;
+    }
+
+    .left-sidebar a{
+        letter-spacing: 2px;
+        font-size: 18px;
+        font-weight: 300;
     }
     
     .left-sidebar a{

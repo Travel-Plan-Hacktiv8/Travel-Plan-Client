@@ -118,7 +118,7 @@ function auth(event) {
     console.log(localStorage.token);
     if (localStorage.token) {
         $('#form-data').attr('style', 'display:none !important')
-        $('#travel-request').attr('style', 'display:flex !important; margin: 20px 50px 20px 50px !important;')
+        $('#travel-request').attr('style', 'display:flex !important; ')
         fetchData()
     } else {
         $('#form-data').show()
