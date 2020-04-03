@@ -1,21 +1,25 @@
 *{
     margin: 0px!important;
     padding: 0px!important;
-    font-family: 'Comic Neue', cursive;
-    
+    /* font-family: 'Comic Neue', cursive; */
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
 }
 
 body{
     
 }
 
-
+.view-data-all{
+    max-height: 45vh;
+    overflow: scroll !important;
+}
 
 #view-data{
     width: 100% !important;
-    min-width: 65vw !important;
+    min-width: 70vw !important;
     max-height: 86vh;
-    overflow: scroll !important;
+    
 }
 
 #travel-create{
@@ -31,6 +35,31 @@ body{
     -webkit-box-shadow: inset 0px 60px 24px -18px rgba(0,0,0,0.02);
     -moz-box-shadow: inset 0px 60px 24px -18px rgba(0,0,0,0.02);
     box-shadow: inset 0px 60px 24px -18px rgba(0,0,0,0.02);
+}
+
+.app .button{
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.app .button:hover{
+    background-color: #1b9ffa;
+    color: white;
+}
+
+.product-adv{
+    position: relative;
+    left: -10px;
+    bottom: 8px;
+    transform: rotate(20deg)
 }
 
 .head-data{
@@ -143,16 +172,13 @@ body{
     }
 
     .left-sidebar a{
-        letter-spacing: 2px;
-        font-size: 18px;
-        font-weight: 700;
-    }
-    
-    .left-sidebar a{
-        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 14px;
         color: white;
         text-decoration: none;
+        /* font-weight: 300; */
     }
+    
     
     .left-sidebar a:hover{
         color: white;
@@ -162,3 +188,5 @@ body{
         border-radius: 20px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
+
+    
