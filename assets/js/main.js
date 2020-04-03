@@ -3,6 +3,14 @@ let baseUrl = 'http://localhost:3000'
 $(document).ready(function () {
     
     // $('[data-toggle="popover"]').popover()
+
+    $('.hideHoliday').click(function (params) {
+        $('.holiday').attr('style', 'display:none  !important;');
+    })
+
+    $('.showHoliday').click(function (params) {
+        $('.holiday').attr('style', 'display:  !important;');
+    })
     
     auth()
     $('#logout').click(function () {
@@ -489,3 +497,4 @@ function onSignIn(googleUser) {
 //   console.log('Image URL: ' + profile.getImageUrl());
 //   console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 }
+
