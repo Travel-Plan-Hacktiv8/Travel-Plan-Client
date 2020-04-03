@@ -1,19 +1,25 @@
 *{
     margin: 0px!important;
     padding: 0px!important;
+    /* font-family: 'Comic Neue', cursive; */
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+}
+
+body{
     
 }
 
-.head-data{
-    border-radius: 20px;
-    width: 70vw !important;
-    height: auto;
-    background-color: #f6f6fa;
+.view-data-all{
+    max-height: 45vh;
+    overflow: scroll !important;
 }
 
 #view-data{
+    width: 100% !important;
+    min-width: 70vw !important;
     max-height: 86vh;
-    overflow: scroll !important;
+    
 }
 
 #travel-create{
@@ -21,12 +27,54 @@
     overflow: scroll !important;
 }
 
+.card-app{
+    border-radius: 20px;
+    width: 100% !important;
+    height: 250px;
+    background-color: #f5f6f9;
+    -webkit-box-shadow: inset 0px 60px 24px -18px rgba(0,0,0,0.02);
+    -moz-box-shadow: inset 0px 60px 24px -18px rgba(0,0,0,0.02);
+    box-shadow: inset 0px 60px 24px -18px rgba(0,0,0,0.02);
+}
+
+.app .button{
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.app .button:hover{
+    background-color: #1b9ffa;
+    color: white;
+}
+
+.product-adv{
+    position: relative;
+    left: -10px;
+    bottom: 8px;
+    transform: rotate(20deg)
+}
+
+.head-data{
+    border-radius: 20px;
+    width: 100% !important;
+    height: auto;
+    background-color: #f5f6f9;
+}
+
 .my-card{
     
     border-radius: 20px;
-    width: 70vw !important;
+    width: 100% !important;
     height: auto;
-    background-color: #f6f6fa;
+    background-color: #f5f6f9;
     -webkit-box-shadow: inset 0px 60px 24px -18px rgba(0,0,0,0.02);
     -moz-box-shadow: inset 0px 60px 24px -18px rgba(0,0,0,0.02);
     box-shadow: inset 0px 60px 24px -18px rgba(0,0,0,0.02);
@@ -109,24 +157,28 @@
     }
     
     .travel-request{
-        border-radius: 50px 50px 50px 50px;
+        /* margin: 20px 50px 20px 50px !important; */
+        /* border-radius: 50px 50px 50px 50px; */
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 
     .left-sidebar{
-        background: rgb(34,112,196);
-        background: linear-gradient(0deg, rgba(34,112,196,1) 25%, rgba(0,123,255,1) 56%);
-        border-radius: 50px 0px 0px 50px;
+        /* border-radius: 50px 0px 0px 50px; */
+        background: #1b9ffa;
+        background: linear-gradient(0deg, #1b9ffa 40%, #0482ff 60%);
         /* background-color: #007bff; */
         height: 101vh;
         width: 100%;
     }
-    
+
     .left-sidebar a{
-        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 14px;
         color: white;
         text-decoration: none;
+        /* font-weight: 300; */
     }
+    
     
     .left-sidebar a:hover{
         color: white;
@@ -136,3 +188,5 @@
         border-radius: 20px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
+
+    
